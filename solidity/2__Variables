@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Variables {
+    // State Variables-kinda like global variables
+    int256 public testInt = 1;
+    uint256 public testUint256 = 1;
+    uint8 public testUint8 = 1;
+
+    string public testString = "Hello, World!";
+    bytes32 public testBytes32 = "Hello, World!";
+
+    address public testAddress = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
+
+    struct TestStruct {
+        uint256 testUint256;
+        string testString;
+    }
+
+    TestStruct public myStruct = TestStruct(1, "Hello, World!");
+
+    // Local Variables
+    //pure function only returns a value . doesn't change anything
+    function getValue() public pure returns (uint256) {
+        uint256 value = 1;
+        return value;
+    }
+}
